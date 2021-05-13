@@ -1,0 +1,26 @@
+{
+  "name": "ppe/dvtinh",
+  "description": "this is base db ppe smile-eyes",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "dvtinh99",
+      "email": "tinh5969@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "ppe\\dvtinh\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ppe\\dvtinh\\Providers\\CoreDBServiceProvider"
+      ]
+    }
+  }
+}
