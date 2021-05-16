@@ -8,11 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 
-class User extends \TCG\Voyager\Models\User
-//class User extends Us
+//class User extends \TCG\Voyager\Models\User
+class User extends Authenticatable
 {
     use \Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
-    protected $connection = 'mysql';
+    protected $connection = 'ppe_core';
+//    protected $table = "users";
     use HasFactory, Notifiable;
     use HasApiTokens;
 
