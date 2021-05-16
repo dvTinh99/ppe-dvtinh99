@@ -13,7 +13,6 @@ class User extends Authenticatable
 {
     use \Staudenmeir\EloquentJsonRelations\HasJsonRelationships;
     protected $connection = 'ppe_core';
-//    protected $table = "users";
     use HasFactory, Notifiable;
     use HasApiTokens;
 
