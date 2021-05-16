@@ -47,3 +47,19 @@ paste code to config/database.php
         ],
         .....
 ````
+
+extends model Users and UserAvatar
+````
+class User extends \ppe\dvtinh\Models\User
+{
+...
+}
+````
+
+````
+class UserAvatar extends \ppe\dvtinh\Models\UserAvatar
+{
+..
+}
+````
+you can keep relationship 
