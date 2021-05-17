@@ -42,9 +42,9 @@ class UpdateSocialProviderUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        $this->schema->table('users', function (Blueprint $table) {
             $table->dropColumn('avatar');
         });
-        Schema::dropIfExists('social_providers');
+        $this->schema->dropIfExists('social_providers');
     }
 }

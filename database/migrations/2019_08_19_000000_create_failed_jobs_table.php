@@ -20,6 +20,7 @@ class CreateFailedJobsTable extends Migration
     }
     public function up()
     {
+        $this->schema->dropIfExists('failed_jobs');
         $this->schema->create('failed_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('uuid')->unique();
@@ -38,6 +39,6 @@ class CreateFailedJobsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('failed_jobs');
+        $this->schema->dropIfExists('failed_jobs');
     }
 }

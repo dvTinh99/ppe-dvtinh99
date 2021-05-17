@@ -20,6 +20,7 @@ class CreateUserAvatarsTable extends Migration
     }
     public function up()
     {
+        $this->schema->dropIfExists('user_avatars');
         $this->schema->create('user_avatars', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
@@ -45,6 +46,6 @@ class CreateUserAvatarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_avatars');
+        $this->schema->dropIfExists('user_avatars');
     }
 }

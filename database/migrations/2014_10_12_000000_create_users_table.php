@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
 
     public function up()
     {
+        $this->schema->dropIfExists('users');
         $this->schema->create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -31,6 +32,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        Schema::connection("mysql")->dropIfExists('users');
         Schema::connection("mysql")->create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -49,6 +51,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        $this->schema->dropIfExists('users');
+        Schema::connection("mysql")->dropIfExists('users');
     }
 }

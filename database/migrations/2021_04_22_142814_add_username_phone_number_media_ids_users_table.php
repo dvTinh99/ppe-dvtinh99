@@ -33,7 +33,7 @@ class AddUsernamePhoneNumberMediaIdsUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        $this->schema->table('users', function (Blueprint $table) {
             $table->dropColumn('username');
             $table->dropColumn('phone_number');
         });

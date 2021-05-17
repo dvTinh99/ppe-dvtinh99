@@ -21,6 +21,7 @@ class CreatePasswordResetsTable extends Migration
 
     public function up()
     {
+        $this->schema->dropIfExists('password_resets');
         $this->schema->create('password_resets', function (Blueprint $table) {
             $table->string('email')->index();
             $table->string('token');
@@ -35,6 +36,6 @@ class CreatePasswordResetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        $this->schema->dropIfExists('password_resets');
     }
 }
