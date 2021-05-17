@@ -6,9 +6,14 @@ class CoreDBServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        //Load route
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
-//        $this->loadViewsFrom(__DIR__ . ‘/../../resources/views’, ‘botble-demo’);
+        //Load migrate
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        //public config
+        $this->publishes([
+            __DIR__.'/../../config/ppe.php' => config_path('ppe.php'),
+        ]);
     }
 
 }
