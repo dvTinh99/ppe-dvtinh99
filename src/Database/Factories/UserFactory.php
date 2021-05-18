@@ -1,5 +1,7 @@
 <?php
 
+namespace ppe\dvtinh\Database\Factories;
+
 use ppe\dvtinh\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;

@@ -4,6 +4,7 @@ namespace ppe\dvtinh\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use ppe\dvtinh\Database\Factories\UserAvatarFactory;
 
 class UserAvatar extends Model
 {
@@ -11,6 +12,11 @@ class UserAvatar extends Model
     use HasFactory;
     protected $table = "user_avatars";
     public $timestamps = true;
+
+    protected static function newFactory()
+    {
+        return UserAvatarFactory::new();
+    }
 
     protected $fillable = [
         'user_id',

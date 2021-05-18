@@ -20,6 +20,7 @@
   },
   "autoload": {
     "psr-4": {
+      "ppe\\dvtinh_root\\": "./",
       "ppe\\dvtinh\\": "src/"
     }
   },
